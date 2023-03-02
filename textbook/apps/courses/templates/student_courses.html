@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 style="color: white;">My Enrollments</h1>
+  {% if enrollments %}
+
+
+
+          <tr>
+               <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                <h4>Basic Examples</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            {% for enrollment in enrollments %}
+
+                                              <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">{{enrollment.course.title}}</th>
+                                                <th scope="col">{{enrollment.get_status_display}}</th>
+
+                                              </tr>
+                                            {% endfor %}
+                                            </thead>
+
+                                          </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+  {% else %}
+    <p style="color: white;">You haven't enrolled in any courses yet.</p>
+  {% endif %}
+{% endblock %}
+

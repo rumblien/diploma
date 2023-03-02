@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="contact-from mt-30">
+    <div class="section-title">
+
+        <h2>Войдите в учётную запись</h2>
+    </div> <!-- section title -->
+    <div class="main-form pt-45">
+        <form method="post">
+
+            <div class="row">
+                {% csrf_token %}
+
+
+                <div class="col-md-6">
+                    <div class="singel-form form-group">
+                        {{form.email}}
+                        <div class="help-block with-errors"></div>
+                    </div> <!-- singel form -->
+                </div>
+                <div class="col-md-6">
+                    <div class="singel-form form-group">
+                        {{form.password}}
+                        <div class="help-block with-errors"></div>
+                    </div> <!-- singel form -->
+                </div>
+
+                <p class="form-message"></p>
+                <div class="col-md-12">
+                    <div class="singel-form">
+                        <button class="btn-fill btn-primary" type="submit" value="Login">
+                                    Войти<i class="flaticon-next"></i>
+                                </button>
+                    </div> <!-- singel form -->
+                </div>
+            </div> <!-- row -->
+        </form>
+    </div> <!-- main form -->
+</div>
+{% endblock %}

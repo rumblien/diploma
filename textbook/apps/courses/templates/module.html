@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+   <div class="events-area">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="events-left">
+                            <h3>{{object.title}}</h3>
+
+                         <p>Video URL:</p>
+                       <iframe width="700" height="400"  src="{{object.video}}"> </iframe>
+                            <p> {{object.description}}</p>
+                        </div> <!-- events left -->
+                        <a href="{{object.file.url}}" target="_blank">
+                                  <button>Открыть файл в новом окне</button>
+                                    </a>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="events-right">
+                            <div class="events-coundwon bg_cover" data-overlay="8" style="background-image: url(images/event/singel-event/coundown.jpg)">
+
+                                <div class="events-coundwon-btn pt-30">
+                                    <a href="{% url 'progress' module.id %}" class="main-btn">Завершить модуль</a>
+                                </div>
+                            </div> <!-- events coundwon -->
+
+                    </div>
+                    </div>
+                    </div>
+                </div>
+
+
+{% endblock %}

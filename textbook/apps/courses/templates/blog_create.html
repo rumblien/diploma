@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Create Post</title>
+    <style>
+        body {
+            background-color: #1E1E1E;
+            color: #FFF;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 4px;
+            background-color: #424242;
+            color: #FFF;
+        }
+
+        input[type="file"] {
+            margin: 8px 0;
+        }
+
+        input[type="submit"], input[type="button"] {
+            background-color: #4285F4;
+            color: #FFF;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        input[type="submit"]:hover, input[type="button"]:hover {
+            background-color: #356CCB;
+        }
+
+        input[type="submit"]:disabled, input[type="button"]:disabled {
+            background-color: #A9A9A9;
+            cursor: not-allowed;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .form-group input[type="file"] + label {
+            font-size: 16px;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+
+        .form-group textarea {
+            height: 200px;
+        }
+
+        .form-group input[type="checkbox"] + label {
+            font-size: 16px;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+
+        .button-group button {
+            background-color: #DB4437;
+        }
+
+        .button-group button:hover {
+            background-color: #C11E0F;
+        }
+
+        .button-group button:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .form-container {
+            top: 0;
+            right: 0;
+            width: 400px;
+            padding: 20px;
+            background-color: #333;
+        }
+           .article-reminder {
+            background-color: #6b53ff;
+            color: #ffffff;
+            padding: 20px;
+            border: 2px solid #5f5aa2;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .article-reminder h3 {
+            margin-top: 0;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .article-reminder p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .box_flex {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box_flex">
+        <div class="article-reminder">
+            <h3>How to write an article that people will trust and want to read?</h3>
+            <p>Some good, old-fashioned research.
+                To perform well, an article is optimized for search engines but written for users.
+                It must be informative, factual, and cater
+                to the user’s search intent.</p>
+            <p>So, once you’ve figured out the topics and the keywords
+                that will boost your article in the search rankings,
+                it’s time to get your facts straight.</p>
+            <p>To avoid falling into a Wikipedia wormhole,
+                focus your research around the keywords you’ve already acquired.
+            </p>
+        </div>
+
+
+        <div class="form-container">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                 {% csrf_token %}
+                {{form}}
+                <button class="btn btn-success" type="submit">  Сохранить</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+
+{% endblock %}

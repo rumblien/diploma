@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% block content %}
+ <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                     <!-- shop top search -->
+                </div>
+            </div> <!-- row -->
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="shop-grid" role="tabpanel" aria-labelledby="shop-grid-tab">
+                    <div class="row justify-content-center">
+                        {% for book in object_list %}
+                        <div class="col-lg-3 col-md-6 col-sm-8">
+                            <div class="singel-publication mt-30">
+                                <div class="image">
+                                    <img src="{{book.image.url}}" alt="Publication">
+                                    <div class="add-cart">
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    <div class="name">
+                                        <a href="shop-singel.html"><h6> Название {{book.name}}</h6></a>
+                                        <span></span>
+                                    </div>
+                                    <div class="button text-right">
+                                        <a href="{{book.file.url}}" class="main-btn">Читать</a>
+                                    </div>
+                                </div>
+                            </div> <!-- singel publication -->
+                        </div>
+                        {% endfor %}
+
+                    </div> <!-- row -->
+                </div>
+                <div class="tab-pane fade" id="shop-list" role="tabpanel" aria-labelledby="shop-list-tab">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="singel-publication mt-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="image">
+                                            <img src="images/publication/p-1.jpg" alt="Publication">
+                                            <div class="add-cart">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="cont">
+                                            <div class="name">
+                                                <a href="shop-singel.html"><h6>Set for life </h6></a>
+                                                <span>$50.00</span>
+                                            </div>
+                                            <div class="description pt-10">
+                                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                                            </div>
+                                            <div class="button">
+                                                <a href="#" class="main-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- row -->
+                            </div> <!-- singel publication -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="singel-publication mt-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="image">
+                                            <img src="images/publication/p-2.jpg" alt="Publication">
+                                            <div class="add-cart">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="cont">
+                                            <div class="name">
+                                                <a href="shop-singel.html"><h6>Set for life </h6></a>
+                                                <span>$50.00</span>
+                                            </div>
+                                            <div class="description pt-10">
+                                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                                            </div>
+                                            <div class="button">
+                                                <a href="#" class="main-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- row -->
+                            </div> <!-- singel publication -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="singel-publication mt-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="image">
+                                            <img src="images/publication/p-3.jpg" alt="Publication">
+                                            <div class="add-cart">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="cont">
+                                            <div class="name">
+                                                <a href="shop-singel.html"><h6>Set for life </h6></a>
+                                                <span>$50.00</span>
+                                            </div>
+                                            <div class="description pt-10">
+                                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                                            </div>
+                                            <div class="button">
+                                                <a href="#" class="main-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- row -->
+                            </div> <!-- singel publication -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="singel-publication mt-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="image">
+                                            <img src="images/publication/p-4.jpg" alt="Publication">
+                                            <div class="add-cart">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="cont">
+                                            <div class="name">
+                                                <a href="shop-singel.html"><h6>Set for life </h6></a>
+                                                <span>$50.00</span>
+                                            </div>
+                                            <div class="description pt-10">
+                                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                                            </div>
+                                            <div class="button">
+                                                <a href="#" class="main-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- row -->
+                            </div> <!-- singel publication -->
+                        </div>
+                    </div> <!-- row -->
+                </div>
+            </div> <!-- tab content -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="courses-pagination mt-50">
+                        <ul class="pagination justify-content-center">
+                              <div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; первая </a>
+            <a href="?page={{ page_obj.previous_page_number }}">предыдущая</a>
+        {% endif %}
+
+        <span class="current">
+            Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">следующая</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">последняя &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+                        </ul>
+                    </nav>  <!-- courses pagination -->
+                </div>
+            </div>  <!-- row -->
+        </div>
+{% endblock %}
+    
+
